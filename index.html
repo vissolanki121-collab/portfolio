@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <!-- Google Fonts for modern typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient glowing background orbs for glassy reflections -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+
+  <!-- NAVIGATION BAR (3 Sections: Home, About Me, My Contacts) -->
+  <header class="navbar-wrapper">
+    <nav class="glass-nav">
+      <div class="nav-logo">
+        <span class="logo-dot"></span> MyPortfolio
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About Me</a></li>
+        <li><a href="#contact" class="nav-link">My Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="page-container">
+
+    <!-- ==============================================
+         SECTION 1: HOME (Introduction & Image on Right)
+         ============================================== -->
+    <section id="home" class="section home-section">
+      <div class="home-glass-card">
+        
+        <!-- Left Side: Heading, Introduction, and Thought -->
+        <div class="home-text-content">
+          <div class="badge">Welcome to my space</div>
+          <h1 class="main-heading">My Portfolio</h1>
+          
+          <div class="intro-block">
+            <h2 class="sub-heading">Hello! I am a First Year Student 👋</h2>
+            <p class="intro-text">
+              I am a passionate beginner embarking on my journey in computer science and technology. 
+              Eager to learn, build, and explore the vast world of coding and innovation one step at a time.
+            </p>
+          </div>
+
+          <!-- Thought Box -->
+          <div class="thought-quote-box">
+            <div class="quote-icon">“</div>
+            <div class="quote-body">
+              <span class="quote-label">My Thought:</span>
+              <p class="quote-text">
+                "Every expert was once a beginner. With curiosity, consistency, and patience, great things are built."
+              </p>
+            </div>
+          </div>
+
+          <!-- Quick Action Buttons -->
+          <div class="cta-group">
+            <a href="#about" class="btn btn-primary">Explore My Journey</a>
+            <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+          </div>
+        </div>
+
+        <!-- Right Side: Profile Image -->
+        <div class="home-image-content">
+          <div class="image-frame">
+            <div class="image-glow"></div>
+            <!-- 
+              TO REPLACE WITH YOUR PHOTO:
+              Save your photo in this folder (e.g., as "my-photo.jpg") 
+              and change src="my-photo.jpg" below!
+            -->
+            <div class="profile-img-container">
+              <!-- Default stylish SVG avatar -->
+              <svg class="avatar-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="200" height="200" rx="100" fill="url(#avatar-grad)"/>
+                <circle cx="100" cy="78" r="38" fill="#e0e7ff"/>
+                <path d="M40 172C40 135 68 118 100 118C132 118 160 135 160 172" fill="#e0e7ff"/>
+                <circle cx="100" cy="80" r="30" fill="#93c5fd"/>
+                <defs>
+                  <linearGradient id="avatar-grad" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#1e3a8a"/>
+                    <stop offset="1" stop-color="#3b82f6"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="image-badge">
+              <span class="status-indicator"></span> 1st Year Student
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================
+         SECTION 2: ABOUT ME (4 Clickable Boxes + 2 Next Line Boxes)
+         ============================================== -->
+    <section id="about" class="section about-section">
+      <div class="section-header">
+        <span class="section-tag">Overview</span>
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">Click any box below to discover more about my activities, passions, and dreams.</p>
+      </div>
+
+      <!-- ROW 1: 4 CLICKABLE BOXES (Academics, Sports, Hobbies, Future Goals) -->
+      <div class="grid-four-boxes">
+        
+        <!-- Box 1: Academics (Clickable to Modal) -->
+        <a href="#modal-academics" class="clickable-card glass-box">
+          <div class="card-icon">🎓</div>
+          <h3 class="card-title">Academics</h3>
+          <p class="card-description">Focusing on fundamentals, coding theory, and core mathematics.</p>
+          <span class="card-action">Click to view &rarr;</span>
+        </a>
+
+        <!-- Box 2: Sports (Clickable to Modal) -->
+        <a href="#modal-sports" class="clickable-card glass-box">
+          <div class="card-icon">⚽</div>
+          <h3 class="card-title">Sports</h3>
+          <p class="card-description">Staying active, building teamwork, and boosting physical endurance.</p>
+          <span class="card-action">Click to view &rarr;</span>
+        </a>
+
+        <!-- Box 3: Hobbies (Clickable to Modal) -->
+        <a href="#modal-hobbies" class="clickable-card glass-box">
+          <div class="card-icon">🎨</div>
+          <h3 class="card-title">Hobbies</h3>
+          <p class="card-description">Creative outlets, music, reading, and tinkering with design.</p>
+          <span class="card-action">Click to view &rarr;</span>
+        </a>
+
+        <!-- Box 4: Future Goals (Clickable to Modal) -->
+        <a href="#modal-goals" class="clickable-card glass-box">
+          <div class="card-icon">🚀</div>
+          <h3 class="card-title">Future Goals</h3>
+          <p class="card-description">Aspiring software engineer, building real-world open-source apps.</p>
+          <span class="card-action">Click to view &rarr;</span>
+        </a>
+
+      </div>
+
+      <!-- ROW 2: 2 BOXES (Interests & Thought) -->
+      <div class="grid-two-boxes">
+        
+        <!-- Box A: Interest -->
+        <div class="glass-box two-box-card">
+          <div class="box-head">
+            <span class="box-badge-icon">💡</span>
+            <h3>Areas of Interest</h3>
+          </div>
+          <p class="two-box-desc">
+            Topics and technologies that spark my curiosity and motivate me to study further:
+          </p>
+          <ul class="interest-pill-list">
+            <li class="pill">Web Development (HTML, CSS, JS)</li>
+            <li class="pill">Problem Solving & Logic</li>
+            <li class="pill">Artificial Intelligence & Automation</li>
+            <li class="pill">UI/UX Design Systems</li>
+            <li class="pill">Open Source Contributions</li>
+          </ul>
+        </div>
+
+        <!-- Box B: Thought -->
+        <div class="glass-box two-box-card">
+          <div class="box-head">
+            <span class="box-badge-icon">💭</span>
+            <h3>My Guiding Thought</h3>
+          </div>
+          <p class="two-box-desc">
+            The philosophy that guides my daily learning, habits, and mindset:
+          </p>
+          <div class="inner-thought-card">
+            <p class="inner-thought-text">
+              "Continuous improvement is better than delayed perfection. Even 1% better every day yields compounding growth over time."
+            </p>
+            <span class="inner-thought-author">— Daily Mindset</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================
+         SECTION 3: MY CONTACTS
+         ============================================== -->
+    <section id="contact" class="section contact-section">
+      <div class="section-header">
+        <span class="section-tag">Reach Out</span>
+        <h2 class="section-title">My Contacts</h2>
+        <p class="section-subtitle">Feel free to connect with me for projects, discussions, or mentorship!</p>
+      </div>
+
+      <div class="contact-glass-grid">
+        
+        <!-- Contact Information Cards -->
+        <div class="contact-info-panel">
+          <div class="contact-card glass-box">
+            <div class="contact-icon">📧</div>
+            <div class="contact-details">
+              <h4>Email Address</h4>
+              <p><a href="mailto:student@example.com">student@example.com</a></p>
+            </div>
+          </div>
+
+          <div class="contact-card glass-box">
+            <div class="contact-icon">📍</div>
+            <div class="contact-details">
+              <h4>Location</h4>
+              <p>College Campus / University City</p>
+            </div>
+          </div>
+
+          <div class="contact-card glass-box">
+            <div class="contact-icon">🌐</div>
+            <div class="contact-details">
+              <h4>Social Profiles</h4>
+              <div class="social-tags">
+                <a href="https://github.com" target="_blank" class="social-chip">GitHub</a>
+                <a href="https://linkedin.com" target="_blank" class="social-chip">LinkedIn</a>
+                <a href="https://twitter.com" target="_blank" class="social-chip">Twitter</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Simple Contact Message Box -->
+        <div class="contact-form-panel glass-box">
+          <h3 class="form-title">Send a Quick Message</h3>
+          <form class="glass-form" action="#" onsubmit="return false;">
+            <div class="input-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" placeholder="John Doe" class="glass-input" required>
+            </div>
+
+            <div class="input-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" placeholder="john@example.com" class="glass-input" required>
+            </div>
+
+            <div class="input-group">
+              <label for="message">Message</label>
+              <textarea id="message" rows="4" placeholder="Hello! I would love to connect..." class="glass-input" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==============================================
+       MODALS FOR THE 4 CLICKABLE BOXES (Pure CSS :target)
+       ============================================== -->
+
+  <!-- Modal 1: Academics -->
+  <div id="modal-academics" class="modal-backdrop">
+    <div class="modal-box glass-card">
+      <a href="#about" class="modal-close" title="Close">&times;</a>
+      <div class="modal-header">
+        <span class="modal-icon">🎓</span>
+        <h3>Academics</h3>
+      </div>
+      <div class="modal-body">
+        <p><strong>Status:</strong> 1st Year Undergraduate Student</p>
+        <p><strong>Current Coursework:</strong></p>
+        <ul class="modal-list">
+          <li>Introduction to Programming & Problem Solving</li>
+          <li>Discrete Mathematics & Calculus</li>
+          <li>Data Structures Basics</li>
+          <li>Computer Systems & Digital Electronics</li>
+        </ul>
+        <p>Always enthusiastic about attending lectures, completing practical labs, and building foundational skills.</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#about" class="btn btn-secondary">Close</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Sports -->
+  <div id="modal-sports" class="modal-backdrop">
+    <div class="modal-box glass-card">
+      <a href="#about" class="modal-close" title="Close">&times;</a>
+      <div class="modal-header">
+        <span class="modal-icon">⚽</span>
+        <h3>Sports & Fitness</h3>
+      </div>
+      <div class="modal-body">
+        <p><strong>Favorite Sports:</strong> Football, Badminton, and Table Tennis</p>
+        <p><strong>Key Takeaways:</strong></p>
+        <ul class="modal-list">
+          <li><strong>Teamwork:</strong> Understanding coordination and supporting teammates.</li>
+          <li><strong>Discipline:</strong> Regular morning practice and endurance training.</li>
+          <li><strong>Mental Focus:</strong> Staying calm and strategic under pressure.</li>
+        </ul>
+        <p>Balancing physical fitness with study hours keeps the mind sharp and energized.</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#about" class="btn btn-secondary">Close</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Hobbies -->
+  <div id="modal-hobbies" class="modal-backdrop">
+    <div class="modal-box glass-card">
+      <a href="#about" class="modal-close" title="Close">&times;</a>
+      <div class="modal-header">
+        <span class="modal-icon">🎨</span>
+        <h3>Hobbies & Creative Pursuits</h3>
+      </div>
+      <div class="modal-body">
+        <p><strong>What I enjoy doing in my free time:</strong></p>
+        <ul class="modal-list">
+          <li><strong>UI & Graphic Design:</strong> Creating clean layouts and experimenting with color palettes.</li>
+          <li><strong>Reading:</strong> Exploring tech articles, self-growth books, and science fiction.</li>
+          <li><strong>Music & Podcasts:</strong> Listening to lo-fi beats while coding and following tech podcasts.</li>
+          <li><strong>Gaming & Strategy:</strong> Chess and puzzle games that test tactical decision-making.</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <a href="#about" class="btn btn-secondary">Close</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4: Future Goals -->
+  <div id="modal-goals" class="modal-backdrop">
+    <div class="modal-box glass-card">
+      <a href="#about" class="modal-close" title="Close">&times;</a>
+      <div class="modal-header">
+        <span class="modal-icon">🚀</span>
+        <h3>Future Goals</h3>
+      </div>
+      <div class="modal-body">
+        <p><strong>Short-Term Milestones:</strong></p>
+        <ul class="modal-list">
+          <li>Master modern Frontend development (HTML, CSS, JavaScript).</li>
+          <li>Participate in my first college hackathon.</li>
+          <li>Build 5 end-to-end web projects to display in this portfolio.</li>
+        </ul>
+        <p><strong>Long-Term Vision:</strong></p>
+        <ul class="modal-list">
+          <li>Become a skilled Full-Stack Software Engineer.</li>
+          <li>Contribute to impactful open-source software used by thousands worldwide.</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <a href="#about" class="btn btn-secondary">Close</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2026 First Year Student Portfolio. Designed with pure HTML & CSS.</p>
+  </footer>
+
+</body>
+</html>
